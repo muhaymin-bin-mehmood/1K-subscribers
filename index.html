@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>1K Subscribers Special | With Circle Burst Animation</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+		<div class="text-container">
+            <h1 class="text">1000</h1><br>
+            <span>Subscribers</span>
+			<div class="animated-text">
+				<h2>Thank you!</h2>
+				<h2>OBRIGADO!</h2>
+				<h2>धन्यवाद!</h2>
+				<h2>Terima kasih!</h2>
+				<h2>ස්තුතියි!</h2>
+				<h2>Gracias!</h2>
+			</div>
+		</div>
+		<div class="animation-container">
+			<div class="burst">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		function createBurst(){
+			let animContainer = document.querySelector('.animation-container');
+			let burst = document.querySelector('.burst');
+
+			burst.style.top = Math.random() * 550 + 'px';
+			burst.style.left = Math.random() * 750 + 'px';
+
+			let burstClone = burst.cloneNode(true);
+			animContainer.appendChild(burstClone);
+
+			setTimeout(() => {
+				burstClone.remove();
+			}, 20000);
+		}
+        setInterval(createBurst, 2000);
+        var count = 0;
+        var text = document.querySelector('.text')
+        setInterval(() => {
+            count++
+            text.innerText = count
+            if(count >= 1000){
+                text.innerText = 1011;
+                clearInterval()
+            }
+        }, 5);
+		</script>
+
+	</body>
+</html>
