@@ -38,14 +38,14 @@ body{
 
 .text-container .animated-text{
 	position: relative;
-	background: #4285F4;
+	background: #f44242;
 	margin-top: 15px;
 	margin-right: auto;
     margin-left: auto;
 	width: 570px;
 	height: 75px;
-	box-shadow: 0 0 10px #4285F4,
-	            0 0 120px #4285F4;
+	box-shadow: 0 0 10px #f44242,
+	            0 0 120px #f44242;
 	overflow: hidden;
 }
 
